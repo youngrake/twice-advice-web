@@ -1,0 +1,596 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="text/javascript" src="loappdd/mknnjs/jquery-3.7.1.js"></script>
+
+		<title>Twice Advice | Умови використання</title>
+		<meta property="og:title" content="Twice Advice | Умови використання" />
+		<meta property="og:image" content="corporate-logo.svg" />
+		
+		<meta property="og:description" content="Twice Advice | Умови використання" />
+		<meta name="description" content="Twice Advice | Умови використання" />
+
+		<link rel="stylesheet" href="loappdd/mkkcs/animate.css" />
+		<link rel="stylesheet" href="loappdd/mkkcs/bootstrap.css" />
+		<link rel="stylesheet" href="loappdd/mkkcs/buttons.css" />
+		<link rel="stylesheet" href="loappdd/mkkcs/bootstrap-icons.css" />
+		<link rel="stylesheet" href="loappdd/mkkcs/slick-theme.css" />
+		<link rel="stylesheet" href="loappdd/mkkcs/slick.css" />
+		<link rel="stylesheet" href="loappdd/mkkcs/jquery.fancybox.min.css" />
+
+		<script type="text/javascript" src="loappdd/mknnjs/jquery.fancybox.min.js"></script>
+		<script type="text/javascript" src="loappdd/mknnjs/slick.file.min.js"></script>
+		<script type="text/javascript" src="loappdd/mknnjs/bootstrap.bundle.min.js"></script>	
+
+
+		
+
+		<link rel="shortcut icon" href="corporate-logo.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="master.css" />
+	
+
+		<style>
+			
+			
+		</style>
+
+		
+	</head>
+
+	<body>		
+		<style>
+
+    .privacyPopup {
+        width: calc(100% - 60px);
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 25px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        max-width: 327px;
+        border-radius: 12px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 15px;
+    }
+
+    .privacyPopup h1 {
+        font-size: 20px;
+    }
+
+    .privacyPopup span {
+        margin: 0;
+        font-size: 16px;
+        display: inline-block;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .button {
+        border: none;
+        cursor: pointer;
+        padding: 10px 30px;
+        margin: 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        background: #060606 !important;
+        color: #fff;
+        border-radius: 2px 25px 25px 2px;
+    }
+
+    .customizeButton {
+        color: #060606;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .customizeButton svg {
+        width: 20px;
+        height: 15px;
+    }
+
+    .agreeButton {
+        color: white;
+    }
+
+    .optionsPanel {
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        position: fixed;
+        bottom: 150px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        width: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 4;
+        border-radius: 10px;
+        max-width: 300px;
+        width: calc(100% - 60px);
+        margin: 0 15px;
+    }
+
+    .optionsPanel .centerText {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .optionsPanel label {
+        margin: 10px 0;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] {
+        display: none;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle:before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border-radius: 50%;
+        left: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle {
+        background-color: #060606;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle:before {
+        left: 20px;
+    }
+
+    .submitButton {
+        color: white;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .centerText {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .alignCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 420px) {
+        .privacyPopup {
+            max-height: 40vh;
+            overflow: auto;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        .privacyPopup h1 {
+            font-size: 18px;
+        }
+
+        .privacyPopup span, .optionsPanel label, .button, .customizeButton {
+            font-size: 13px;
+        }
+
+        .button, .customizeButton svg {
+            padding: 8px 20px;
+            margin: 5px;
+        }
+
+        .optionsPanel {
+            padding: 15px;
+        }
+    }
+</style>
+
+<div class="privacyPopup hidden">
+    <h1>Чи можемо ми використовувати файли cookie?</h1>
+
+    <span>Ми використовуємо <a target="_blank" href="trackingCookies.html" style="color: #571a9b;">файли cookie</a>, щоб з'ясувати, з чим у вас виникли проблеми з навігацією по нашому сайту, і вирішити ці проблеми для ваших майбутніх відвідувань.</span>
+
+    <div>
+
+        <button class="agreeButton button">Так</button>
+        <button class="declineButton button">Ні</button>
+
+        <div class="customizeButton">
+            Налаштувати
+
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <title></title> <g id="Complete"> <g id="arrow-right"> <g> <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg>
+        </div>
+    </div>
+</div>
+<div class="optionsPanel hidden">
+    <div class="centerText">Налаштування файлів cookie</div>
+
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="analytics">
+        Аналітика
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="preferences">
+        Налаштування
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="marketing">
+        Маркетингу
+
+        <span class="toggle"></span>
+    </label>
+
+    <div class="alignCenter">
+        <button class="submitButton button">Рятувати</button>
+    </div>
+</div>
+
+<script>
+    const setCookie = (name, value, days) => {
+        if (days) {
+            const expires = `; expires=${new Date(Date.now() + days * 864e5).toUTCString()}`;
+            document.cookie = `${name}=${value || ""}${expires}; path=/`;
+        }
+    }
+
+    const getCookie = name => {
+        const nameEQ = name + "=";
+        return document.cookie.split(';').map(c => c.trim()).find(cookie => cookie.startsWith(nameEQ))?.substring(nameEQ.length) || null;
+    }
+
+    const popup = document.querySelector('.privacyPopup');
+    const panel = document.querySelector('.optionsPanel');
+    const togglePanel = () => panel.classList.toggle('hidden');
+    const consentCheckboxes = document.querySelectorAll('.consentCheckbox');
+    const customize = document.querySelector('.customizeButton');
+    const agree = document.querySelector('.agreeButton');
+    const submit = document.querySelector('.submitButton');
+    const decline = document.querySelector('.declineButton');
+
+    customize.addEventListener('click', togglePanel);
+    submit.addEventListener('click', () => {
+        togglePanel();
+    });
+    agree.addEventListener('click', () => {
+        const consent = [...consentCheckboxes].filter(cb => cb.checked).map(cb => cb.name);
+        setCookie("UserSession-16347", JSON.stringify(consent), 365);
+
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+    decline.addEventListener('click', () => {
+        setCookie("UserSession-16347", JSON.stringify([]), 365);
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+
+    const cookieCheckboxes = document.querySelectorAll('.consentCheckbox')
+
+    function saveCheckboxState() {
+        const checkboxesState = {};
+        cookieCheckboxes.forEach((input) => {
+            checkboxesState[input.name] = input.checked;
+        });
+        localStorage.setItem('checkboxesState', JSON.stringify(checkboxesState));
+    }
+
+    cookieCheckboxes.forEach((input) => {
+        input.addEventListener('change', e => {
+            saveCheckboxState();
+        });
+    });
+
+    function loadCheckboxState() {
+        const checkboxesState = JSON.parse(localStorage.getItem('checkboxesState'));
+        if (checkboxesState) {
+            cookieCheckboxes.forEach((input) => {
+                input.checked = checkboxesState[input.name] || false;
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCheckboxState);
+
+    const consent = getCookie("UserSession-16347");
+    if (!consent) popup.classList.remove('hidden');
+</script>
+
+
+<header>
+	<nav class="navbar navbar-expand-lg navbar-custom sticky">
+		<div class="container">
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#offcanvasNavbar"
+				aria-controls="offcanvasNavbar"
+				aria-label="Toggle navigation"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+					class="bi bi-justify"
+					viewBox="0 0 16 16"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+					/>
+				</svg>
+			</button>
+			<a href="./" class="header__logo text-uppercase logo-menu">
+				<img src="corporate-logo.svg " alt=" " />
+			</a>
+			<div
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="offcanvasNavbar"
+				aria-labelledby="offcanvasNavbarLabel"
+			>
+				<div class="offcanvas-header">
+					<a href="./" class="header__logo text-uppercase mob-logo">
+						<span> Twice Advice</span>
+					</a>
+					<button
+						type="button"
+						class="btn-close"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					></button>
+				</div>
+				<div class="offcanvas-body">
+					<a href="./" class="header__logo text-uppercase logo-inside">
+						<img src="corporate-logo.svg" alt=" " />
+					</a>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="./">Дім</a>
+						</li>
+
+						<li class="nav-item menu-togl">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+								Послуги</a>
+							<ul class="dropdown-menu">
+								
+								<li class="dropdown-item">
+									<a href="choose-your-perfect-educational-path-with-twice-advice.html">Виберіть свій ідеальний освітній шлях із подвійною порадою</a>
+								</li>
+								 
+								<li class="dropdown-item">
+									<a href="ensure-quality-education-with-twice-advice-expert-assessment-and-inspection-services.html">Забезпечте якісну освіту за допомогою послуг експертної оцінки та інспекції Twice Advice</a>
+								</li>
+								 
+								<li class="dropdown-item">
+									<a href="smooth-your-path-to-university-with-twice-advice-admission-support-services.html">Згладьте свій шлях до університету за допомогою послуг підтримки при вступі від Twice Advice </a>
+								</li>
+								 
+								<li class="dropdown-item">
+									<a href="seamless-transition-with-twice-advice-comprehensive-information-support-and-adaptation-services.html">Плавний перехід з подвійними порадами: комплексна інформаційна підтримка та послуги з адаптації</a>
+								</li>
+								
+							</ul>
+							<ul class="menu-wrapper-lg">
+								
+								<li class="menu-lg">
+									<a href="choose-your-perfect-educational-path-with-twice-advice.html" class="menu-img">
+										<img src="6672972ea4b0e_5469560_portrait.jpg" alt="Відкрийте своє майбутнє за допомогою Twice Advice: виберіть правильний університет і спеціальність" />
+									</a>
+									<a href="choose-your-perfect-educational-path-with-twice-advice.html" class="menu-title">Виберіть свій ідеальний освітній шлях із подвійною порадою</a>
+								</li>
+								 
+								<li class="menu-lg">
+									<a href="ensure-quality-education-with-twice-advice-expert-assessment-and-inspection-services.html" class="menu-img">
+										<img src="snapshot_66729730a548c_9369965.jpeg" alt="Виберіть свій ідеальний освітній шлях із подвійною порадою" />
+									</a>
+									<a href="ensure-quality-education-with-twice-advice-expert-assessment-and-inspection-services.html" class="menu-title">Забезпечте якісну освіту за допомогою послуг експертної оцінки та інспекції Twice Advice</a>
+								</li>
+								 
+								<li class="menu-lg">
+									<a href="smooth-your-path-to-university-with-twice-advice-admission-support-services.html" class="menu-img">
+										<img src="66729732b3d98_3831758_vision.jpg" alt="Забезпечте якісну освіту за допомогою послуг експертної оцінки та інспекції Twice Advice" />
+									</a>
+									<a href="smooth-your-path-to-university-with-twice-advice-admission-support-services.html" class="menu-title">Згладьте свій шлях до університету за допомогою послуг підтримки при вступі від Twice Advice </a>
+								</li>
+								 
+								<li class="menu-lg">
+									<a href="seamless-transition-with-twice-advice-comprehensive-information-support-and-adaptation-services.html" class="menu-img">
+										<img src="66729734adb81-930560-shot.jpg" alt="Згладьте свій шлях до університету за допомогою послуг підтримки при вступі від Twice Advice" />
+									</a>
+									<a href="seamless-transition-with-twice-advice-comprehensive-information-support-and-adaptation-services.html" class="menu-title">Плавний перехід з подвійними порадами: комплексна інформаційна підтримка та послуги з адаптації</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="about-us.html">Хто ми</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="ask-us.html">Контакт</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+
+<section class="section-page">
+    <div class="container">
+        <h1 class="text-center title">Twice Advice | Умови використання</h1>
+        <div class="privacy-box">
+            <p>Ці умови («Угода») встановлюють загальні умови використання Веб-сайт вами веб-сайту («Веб-сайт» або «Послуга») та
+	будь-які пов'язані з ним продукти та послуги (разом "Послуги"). Ця Угода є юридично обов'язковою між вами («Користувач», «ви» або «ваш») та Веб-сайт
+	("Веб-сайт", "ми", "нас" або "наш"). Якщо ви укладаєте цю Угоду від імені юридичної або іншої юридичної особи, ви заявляєте, що маєте повноваження зобов'язувати таку компанію
+	особа цієї Угоди, і в цьому випадку терміни «Користувач», «ви» або «ваш» відносяться до такої особи. Якщо у вас немає таких повноважень, або якщо ви не згодні з умовами цієї Угоди, ви
+	не повинен приймати цю Угоду та не може отримувати доступ до Веб-сайту та Послуг та використовувати їх. Отримуючи доступ та використовуючи Веб-сайт та Послуги, ви підтверджуєте, що прочитали, зрозуміли та погоджуєтесь дотримуватися умов цієї Угоди.
+	Ви визнаєте, що ця Угода є договором між вами та , навіть якщо вона є електронною та фізично не підписана вами, і вона регулює ваше використання Веб-сайту та Веб-сайтПослуг.</p>
+<div class="wpembed-toc">
+	<h3>Зміст</h3>
+	<ol class="wpembed-toc">
+		<li><a href="#accounts-and-membership">Облікові записи та членство</a></li>
+		<li><a href="#user-content">Користувацький контент</a></li>
+		<li><a href="#backups">Резервні копії</a></li>
+		<li><a href="#links-to-other-resources">Посилання на інші ресурси</a></li>
+		<li><a href="#limitation-of-liability">Обмеження відповідальності</a></li>
+		<li><a href="#changes-and-amendments">Зміни та поправки</a></li>
+		<li><a href="#acceptance-of-these-terms">Прийняття цих умов</a></li>
+		<li><a href="#contacting-us">Зв'язатися з нами</a></li>
+	</ol>
+</div>
+<h2 id="accounts-and-membership">Облікові записи та членство</h2>
+<p>Якщо ви створюєте обліковий запис на Веб-сайті, ви несете відповідальність за підтримку безпеки свого облікового запису та несете повну відповідальність за всі дії, які відбуваються під обліковим записом, та будь-які інші дії, вжиті у зв'язку з цим.
+	Ми можемо, але не зобов'язані, відстежувати й переглядати нові облікові записи, перш ніж ви зможете ввійти в обліковий запис і почати користуватися Службами. Надання неправдивої контактної інформації будь-якого роду може призвести до припинення дії вашого облікового запису. Необхідно негайно
+	повідомляти нас про будь-яке несанкціоноване використання вашого облікового запису або будь-які інші порушення безпеки. Ми не несемо відповідальності за будь-які ваші дії або бездіяльність, включаючи будь-які збитки будь-якого роду, понесені в результаті таких дій або бездіяльності. Ми можемо
+	призупинити, вимкнути або видалити ваш обліковий запис (або будь-яку його частину), якщо ми визначимо, що ви порушили будь-яке положення цієї Угоди або що ваша поведінка чи вміст можуть завдати шкоди нашій репутації та діловій репутації. Якщо ми видалимо ваш
+	обліковий запис з вищезазначених причин ви не можете повторно зареєструватися для отримання наших Послуг. Ми можемо заблокувати вашу адресу електронної пошти та адресу інтернет-протоколу, щоб запобігти подальшій реєстрації.</p>
+<h2 id="user-content">Користувацький контент</h2>
+<p>Ми не володіємо жодними даними, інформацією або матеріалами (разом «Контент»), які ви розміщуєте на Веб-сайті в процесі використання Сервісу. Ви несете повну відповідальність за точність, якість, цілісність, законність,
+	надійність, доцільність та право інтелектуальної власності або право на використання всього представленого Контенту. Ми можемо відстежувати та переглядати Контент на Веб-сайті, представлений або створений вами за допомогою наших Послуг. Ви надаєте нам дозвіл на
+	отримувати, копіювати, розповсюджувати, зберігати, передавати, переформатовувати, відображати та виконувати Вміст вашого облікового запису користувача виключно так, як це потрібно для надання вам Послуг. Не обмежуючи будь-які з цих заяв або гарантій,
+	ми маємо право, хоча і не зобов'язані, на власний розсуд відмовити або видалити будь-який Вміст, який, на нашу обґрунтовану думку, порушує будь-яку з наших політик або будь-яким чином є шкідливим чи небажаним. Хіба що конкретно
+	дозволене вами, використання вами Веб-сайту та Послуг не надає нам ліцензії на використання, відтворення, адаптацію, зміну, публікацію або розповсюдження Контенту, створеного вами або збереженого у вашому обліковому записі користувача для комерційних, маркетингових або будь-яких інших
+	аналогічне призначення.</p>
+<h2 id="backups">Резервні копії</h2>
+<p>Ми не несемо відповідальності за Контент, розміщений на Веб-сайті. Ні в якому разі ми не несемо відповідальності за будь-яку втрату будь-якого Контенту. Ви несете виключну відповідальність за підтримку належного резервного копіювання свого Вмісту. Незважаючи на
+	Вищесказане, в деяких випадках і за певних обставин, абсолютно без будь-яких зобов'язань, ми можемо відновити деякі або всі ваші дані, які були видалені станом на певну дату та час, коли ми, можливо, створили резервну копію даних для власних
+	Цілей. Ми не даємо жодних гарантій, що потрібні вам дані будуть доступні.</p>
+<h2 id="links-to-other-resources">Посилання на інші ресурси</h2>
+<p>Хоча Веб-сайт та Послуги можуть посилатися на інші ресурси (такі як веб-сайти, мобільні додатки тощо), ми прямо чи опосередковано не маємо на увазі будь-яке схвалення, асоціацію, спонсорство, схвалення чи приналежність до будь-яких
+	пов'язаний ресурс, якщо інше не зазначено в цьому документі. Ми не несемо відповідальності за вивчення або оцінку, і ми не гарантуємо пропозиції будь-яких компаній або приватних осіб або зміст їхніх ресурсів. Ми не припускаємо жодних
+	відповідальність або відповідальність за дії, продукти, послуги та вміст будь-яких інших третіх сторін. Ви повинні уважно ознайомитися з юридичними заявами та іншими умовами використання будь-якого ресурсу, на який ви переходите за посиланням на
+	Веб-сайт. Ваше посилання на будь-які інші зовнішні ресурси здійснюється на ваш страх і ризик.</p>
+<h2 id="limitation-of-liability">Обмеження відповідальності</h2>
+<p>У максимальному ступені, дозволеному чинним законодавством, ні в якому разі її філії, директори, посадові особи, співробітники, агенти, постачальники або ліцензіари не несуть Веб-сайтвідповідальності перед будь-якою особою за будь-які непрямі, випадкові, спеціальні, каральні дії,
+	відшкодування або непрямі збитки (включаючи, але не обмежуючись, збитки через упущену вигоду, дохід, продажі, репутацію, використання вмісту, вплив на бізнес, переривання бізнесу, втрату очікуваних заощаджень, втрату можливості для бізнесу)
+	однак, спричинена відповідно до будь-якої теорії відповідальності, включаючи, але не обмежуючись, договором, деліктом, гарантією, порушенням встановленого законом обов'язку, недбалістю або іншим чином, навіть якщо відповідальну сторону було повідомлено про можливість таких збитків
+	або міг передбачити такі збитки. У максимальному ступені, дозволеному чинним законодавством, сукупна відповідальність Веб-сайт афілійованих осіб, посадових осіб, співробітників, агентів, постачальників і ліцензіарів, пов'язаних із послугами, становитиме:
+	обмежена сумою, що не перевищує одного долара, або будь-якими сумами, фактично сплаченими готівкою Веб-сайт вами за попередній місячний період до першої події або події, що спричинила таку відповідальність. Обмеження та
+	Винятки також застосовуються, якщо цей засіб правового захисту не повністю компенсує будь-які збитки або не виконує свою основну мету.</p>
+<p>Більше інформації можна знайти в <a target="_blank" href="medical-disclaimer.html">застереженні</a></p>
+
+<h2 id="changes-and-amendments">Зміни та поправки</h2>
+<p>Ми залишаємо за собою право змінювати цю Угоду або її умови, пов'язані з Веб-сайтом та Послугами, у будь-який час на наш розсуд. Коли ми це зробимо, ми розмістимо повідомлення на головній сторінці Веб-сайту. Ми також можемо повідомити вас у
+	іншими способами на наш розсуд, наприклад, через надану вами контактну інформацію.</p>
+<p>Оновлена версія цієї Угоди набуває чинності негайно після публікації переглянутої Угоди, якщо не зазначено інше. Ваше подальше використання Веб-сайту та Послуг після дати набрання чинності переглянутою Угодою
+	(або інша дія, зазначена на той момент) означатиме вашу згоду з цими змінами.</p>
+<h2 id="acceptance-of-these-terms">Прийняття цих умов</h2>
+<p>Ви підтверджуєте, що прочитали цю Угоду та погоджуєтеся з усіма її умовами. Отримуючи доступ та використовуючи Веб-сайт та Послуги, ви погоджуєтесь дотримуватися цієї Угоди. Якщо ви не згодні дотримуватися умов цього
+	Згода, ви не маєте права отримувати доступ або використовувати Веб-сайт та Послуги.</p>
+<h2 id="contacting-us">Зв'язатися з нами</h2>
+<p>Якщо у вас є які-небудь питання, занепокоєння або скарги щодо цієї Угоди, радимо зв'язатися з нами, використовуючи наведені нижче дані.</p>
+<p>ТОВ «МАРКЕТ ВОРОТ», Код ЕГРПОУ 40878119 вул. Богдана Хмельницького, 52В, Київ, 02000</p>
+<p>0442271998</p>
+<p>operations-twice-advice@mail.yahoo.com</p>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer class="footer wrapper__CoDjr__section">
+	<div class="container">
+		<div class="privacy-wrapper">
+			<a class="privacy" href="privacyInfo.html"> Політика конфіденційності</a>
+			<a class="privacy" href="membershipTerms.html"> Правила та умови</a>
+			<a class="privacy" href="medical-disclaimer.html"> Застереження</a>
+		</div>
+		<div class="footer-button footer-hqJhB-element">
+		 <span>&#169 2020</span> 
+		 Спроектований і побудований з усією любов'ю світу!
+	</div>
+	</div>	
+</footer>
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+
+		if (scroll >= 30) {
+			$('.sticky').addClass('nav-sticky');
+		} else {
+			$('.sticky').removeClass('nav-sticky');
+		}
+	});
+</script>
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll('.animate-element');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        });
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+</script>
+
+
+	
+
+</body>
+</html>
